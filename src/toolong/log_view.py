@@ -118,7 +118,7 @@ class FooterKey(Label):
         return f"[reverse]{self.key_display}[/reverse] {self.description}"
 
     async def on_click(self) -> None:
-        await self.app.check_bindings(self.key)
+        self.app.simulate_key(self.key)
 
 
 class MetaLabel(Label):
